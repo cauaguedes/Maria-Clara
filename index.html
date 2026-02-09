@@ -8,72 +8,131 @@
 </head>
 <body>
 
+<!-- CORAÇÃO DE FUNDO -->
+<div class="background-heart">❤️</div>
+
+<!-- CORAÇÕES SUBINDO -->
+<div id="hearts"></div>
+
 <!-- TELA INICIAL -->
 <section class="start">
-  <h1>Maria Clara 💗</h1>
-  <p>Isso aqui é tudo o que meu coração sente por você</p>
+  <div class="portrait">
+    <img src="retrato.jpg" alt="Maria Clara">
+  </div>
+  <h1 class="fade-text">Maria Clara 💗</h1>
+  <p class="fade-text">Clique e veja tudo o que meu coração sente por você</p>
   <button onclick="start()">Entrar</button>
 </section>
 
-<!-- SLIDES -->
+<!-- SLIDER -->
 <div class="slider hidden" id="slider">
 
   <!-- SLIDE 1 -->
-  <section class="slide active">
-    <h2>💌 Desde o começo</h2>
-    <p>
-      Desde a primeira vez que te vi, algo em mim mudou.  
-      Não foi só admiração… foi paz, foi conexão, foi sentir que você era diferente.
-    </p>
-  </section>
-
-  <!-- SLIDE 2 -->
   <section class="slide">
-    <h2>🤍 Porto seguro</h2>
-    <p>
-      Seu abraço virou meu porto seguro.  
-      Todos os dias.  
-      Seu cheiro, seu jeito, o encaixe perfeito…  
-      tudo em você me acalma.
-    </p>
-  </section>
-
-  <!-- SLIDE 3 -->
-  <section class="slide">
-    <h2>✨ O que eu sinto</h2>
-    <p>
-      Com o tempo eu percebi que não consigo ficar sem falar com você.  
-      Você virou parte do meu dia, da minha rotina, do meu pensamento.
-    </p>
-  </section>
-
-  <!-- SLIDE 4 -->
-  <section class="slide">
-    <h2>📸 Nós</h2>
-    <div class="gallery">
-      <!-- COLOQUE SUAS FOTOS -->
-      <img src="foto1.jpg">
-      <img src="foto2.jpg">
-      <img src="foto3.jpg">
+    <div class="card">
+      <h2 class="fade-text">💌 Pra Meu Amor</h2>
+      <img src="amor.jpg" class="photo">
     </div>
   </section>
 
-  <!-- SLIDE 5 -->
-  <section class="slide">
-    <h2>❤️ Final</h2>
-    <p>
-      Maria Clara, isso aqui é só um pedacinho do que sinto.  
-      Mas é verdadeiro, é intenso, é do coração.  
-      E é todo seu.
-    </p>
+  <!-- SLIDE 2 -->
+  <section class="slide slide-small">
+    <div class="card">
+      <h2 class="fade-text">❤️ Coisas que eu amo em você</h2>
+      <ol class="columns-list">
+        <li>Seu jeito</li>
+        <li>Seu abraço</li>
+        <li>Seu cheiro</li>
+        <li>Seu cuidado comigo</li>
+        <li>Sua presença</li>
+        <li>Seus detalhes físicos únicos</li>
+        <li>Seu olhar</li>
+      </ol>
+    </div>
   </section>
 
-  <!-- CONTROLES -->
-  <div class="controls">
-    <button onclick="prev()">⬅️</button>
-    <button onclick="next()">➡️</button>
+  <!-- SLIDES INDIVIDUAIS -->
+  <section class="slide">
+    <div class="card">
+      <p class="highlight fade-text">Seu jeito.</p>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="card">
+      <p class="highlight fade-text">Seu abraço.</p>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="card">
+      <p class="highlight fade-text">Seu cheiro.</p>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="card">
+      <p class="highlight fade-text">Seu cuidado comigo.</p>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="card">
+      <p class="highlight fade-text">Sua presença.</p>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="card">
+      <p class="highlight fade-text">Seu olhar.</p>
+    </div>
+  </section>
+
+  <!-- SLIDE MÚSICA 1 -->
+<section class="slide">
+  <div class="card">
+    <h2 class="fade-text">🎶</h2>
+    <p class="highlight fade-text">
+      <!-- COLE AQUI O REFRÃO DA MÚSICA -->
+      Escreva aqui o refrão que te lembra ela.
+    </p>
   </div>
+</section>
+
+<!-- SLIDE MÚSICA 2 -->
+<section class="slide">
+  <div class="card">
+    <h2 class="fade-text">🎵</h2>
+    <p class="highlight fade-text">
+      <!-- COLE AQUI OUTRO REFRÃO -->
+      Escreva aqui outro refrão que faz você pensar nela.
+    </p>
+  </div>
+</section>
+
+<!-- SLIDE MÚSICA 3 -->
+<section class="slide">
+  <div class="card">
+    <h2 class="fade-text">🎼</h2>
+    <p class="highlight fade-text">
+      <!-- COLE AQUI MAIS UM REFRÃO -->
+      Escreva aqui mais um trecho que sempre te leva até ela.
+    </p>
+  </div>
+</section>
+
 
 </div>
 
-<script src="script.js"
+<!-- CONTROLES -->
+<div class="controls hidden" id="controls">
+  <button onclick="prev()">⬅️</button>
+  <button onclick="next()">➡️</button>
+</div>
+
+<!-- MÚSICA -->
+<audio id="music" src="musica.mp3" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
