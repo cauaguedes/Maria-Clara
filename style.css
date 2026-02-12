@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+/* =========================
+   RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +16,9 @@ body {
   overflow-x: hidden;
 }
 
-/* CORAÇÃO FUNDO */
+/* =========================
+   CORAÇÃO FUNDO
+========================= */
 .background-heart {
   position: fixed;
   top: 50%;
@@ -26,11 +31,13 @@ body {
 }
 
 @keyframes beat {
-  0%,100% { transform: translate(-50%, -50%) scale(1); }
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
   50% { transform: translate(-50%, -50%) scale(1.1); }
 }
 
-/* TELA INICIAL */
+/* =========================
+   TELA INICIAL
+========================= */
 .start {
   height: 100vh;
   display: flex;
@@ -63,10 +70,20 @@ body {
   border: none;
   font-size: 1.2rem;
   color: #ff1493;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-/* SLIDER */
-.hidden { display: none; }
+.start button:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   SLIDER
+========================= */
+.hidden {
+  display: none;
+}
 
 .slider {
   display: flex;
@@ -78,6 +95,7 @@ body {
   padding: 40px 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .slide-small .card {
@@ -85,15 +103,18 @@ body {
   padding: 18px;
 }
 
-/* CARD */
+/* =========================
+   CARD PADRÃO
+========================= */
 .card {
-  background: rgba(255,255,255,0.18);
+  background: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 25px;
   max-width: 350px;
   width: 100%;
   text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .photo {
@@ -103,7 +124,9 @@ body {
   border: 2px solid white;
 }
 
-/* LISTA */
+/* =========================
+   LISTA
+========================= */
 .columns-list {
   column-count: 2;
   column-gap: 25px;
@@ -116,14 +139,18 @@ body {
   margin-bottom: 10px;
 }
 
-/* TEXTO DESTAQUE */
+/* =========================
+   TEXTO DESTAQUE
+========================= */
 .highlight {
   font-size: 2.2rem;
   font-weight: bold;
   margin-top: 20px;
 }
 
-/* ANIMAÇÃO TEXTO */
+/* =========================
+   ANIMAÇÃO TEXTO FADE
+========================= */
 .fade-text {
   opacity: 0;
   transform: translateY(20px);
@@ -137,7 +164,9 @@ body {
   }
 }
 
-/* CONTROLES */
+/* =========================
+   CONTROLES
+========================= */
 .controls {
   position: fixed;
   bottom: 20px;
@@ -154,9 +183,17 @@ body {
   border: none;
   border-radius: 50%;
   padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-/* CORAÇÕES SUBINDO */
+.controls button:hover {
+  transform: scale(1.1);
+}
+
+/* =========================
+   CORAÇÕES SUBINDO
+========================= */
 .heart {
   position: fixed;
   bottom: -20px;
@@ -168,4 +205,51 @@ body {
     transform: translateY(-100vh);
     opacity: 0;
   }
+}
+
+/* =========================
+   SLIDE FINAL ESPECIAL
+========================= */
+.final-frame {
+  background: linear-gradient(145deg, #ff9acb, #ff5fa2);
+  padding: 30px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  animation: fadeUp 1.5s ease forwards;
+  transition: 0.4s ease;
+}
+
+.final-frame:hover {
+  transform: scale(1.03);
+}
+
+.final-photo {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* =========================
+   FRASE DIGITANDO
+========================= */
+.final-phrase {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+  min-height: 60px;
+}
+
+/* Cursor piscando */
+#typewriter::after {
+  content: "|";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
 }
